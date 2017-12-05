@@ -18,6 +18,12 @@ class PassphraseChecker
     public function isValidPassphraseAnagram($phrase)
     {
         $words = explode(' ', $phrase);
+        $words = array_map(function ($word) {
+            $word = str_split($word, 1);
+            sort($word);
+            return join('', $word);
+        }, $words);
+
         $wordsCount = count($words);
 
         $uniqueWords = array_unique($words);

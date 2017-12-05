@@ -1,0 +1,13 @@
+{
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aoc\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { "Test\\": "test/" }
+    }
+}
